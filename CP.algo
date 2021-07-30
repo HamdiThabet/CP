@@ -1,0 +1,36 @@
+ALGORITHM LDS
+VAR
+ sd: INTEGER :=0;
+ set1:={};
+ set2:={};
+ found :=false;
+BEGIN
+ for(let i=0 ; i<set1.length ; i++)
+{
+    found:=false;
+    for(let j=0 ; j<set2.length ; j++)
+    {
+        if(set1[i]==set2[j])
+        {found:=true;}
+
+    } END for
+    if (found==false)
+    {
+        sd:=sd+set1[i];
+    }
+}
+ for(let j=0 ; j<set2.length ; j++)
+{
+    found:=false;
+    for(let i=0 ; i<set1.length ; i++)
+    {
+        if(set1[i]==set2[j])
+        {found:=true;}
+
+    } END for
+    if (found==false)
+    {
+        sd:=sd+set2[j];
+    }
+}
+END
